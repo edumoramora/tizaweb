@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pide por Telegram | Tiza</title>
+  <meta name="description" content="Haz tu pedido de creatina Tiza por Telegram.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Unbounded:wght@700;900&amp;display=swap">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="cabecera">
+    <div class="dentro">
+      <a class="marca" href="index.html">TIZA</a>
+      <nav aria-label="Principal">
+        <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="detalles.html">Producto</a></li>
+        <li><a href="sabores.html">Sabores y precios</a></li>
+        <li><a href="productos.html">Más productos</a></li>
+        <li><a href="contacto.html" aria-current="page">Telegram</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="bloque fondo-negro">
+      <div class="dentro dos">
+        <div class="dos__a">
+          <h1 class="grande">Pide por Telegram</h1>
+          <p class="corto">Rellena el pedido y se abre nuestro chat de Telegram con el mensaje ya escrito. Solo tienes que enviarlo.</p>
+          <p class="chivato" aria-live="polite" data-eleccion data-con="%s: %p" data-sin="Sin sabor elegido todavía">Sin sabor elegido todavía</p>
+          <a href="sabores.html">Elegir o cambiar de sabor</a>
+          <p class="nota">Si prefieres escribirnos tú directamente, estamos en Telegram: <a data-telegram href="https://t.me/">[TU USUARIO DE TELEGRAM]</a></p>
+        </div>
+        <form class="formulario dos__b" data-pedido>
+          <div class="campo">
+            <label for="f-nombre">Nombre</label>
+            <input id="f-nombre" name="nombre" type="text" autocomplete="name" required>
+          </div>
+          <div class="campo">
+            <label for="f-msg">Qué quieres pedir</label>
+            <textarea id="f-msg" name="mensaje" rows="5" required></textarea>
+          </div>
+          <button class="boton boton--negro" type="submit">Enviar pedido por Telegram</button>
+          <p class="nota" data-aviso aria-live="polite">Se abrirá Telegram con el pedido ya escrito.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="dentro">
+      <p class="pie__marca">TIZA</p>
+      <p>Los complementos alimenticios no deben utilizarse como sustitutos de una dieta variada y equilibrada ni de un modo de vida saludable. No superar la dosis diaria recomendada. Mantener fuera del alcance de los niños más pequeños. Producto destinado a personas adultas.</p>
+      <p>© 2026 Tiza. [TU RAZÓN SOCIAL].</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

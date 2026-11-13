@@ -1,0 +1,281 @@
+/* ==========================================================
+   TIZA · estilos compartidos por todas las páginas
+   Colores: rosa + negro + lima. Cambia los tres aquí arriba
+   y se actualiza toda la web.
+   ========================================================== */
+
+:root {
+  --rosa: #FF2E93;
+  --negro: #000000;
+  --lima: #D2FF3C;
+  --blanco: #FFFFFF;
+  --gris: #D4D4D4;          /* texto secundario sobre negro */
+
+  --titulos: "Unbounded", "Arial Black", sans-serif;
+  --texto: "DM Sans", system-ui, sans-serif;
+
+  --ancho: 1120px;
+  --lado: clamp(20px, 5vw, 64px);
+  --aire: clamp(48px, 7vw, 96px);
+
+  --foco: var(--lima);      /* color del contorno de foco */
+  --sombra: var(--negro);   /* color de la sombra de los botones */
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--texto);
+  font-size: 19px;
+  line-height: 1.55;
+  color: var(--negro);
+  background: var(--negro);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, p, ul, ol { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+svg { max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: 4px; }
+
+:focus-visible { outline: 4px solid var(--foco); outline-offset: 3px; }
+
+.dentro { max-width: var(--ancho); margin: 0 auto; }
+.pila { display: flex; flex-direction: column; gap: clamp(24px, 3.5vw, 40px); }
+
+.saltar {
+  position: absolute; left: 12px; top: -80px; z-index: 10;
+  background: var(--lima); color: var(--negro);
+  padding: 12px 18px; border-radius: 999px; font-weight: 700;
+}
+.saltar:focus { top: 12px; }
+
+/* ---------- Fondos de sección ---------- */
+
+.fondo-rosa   { background: var(--rosa);   color: var(--negro);  --foco: var(--negro); --sombra: var(--negro); }
+.fondo-lima   { background: var(--lima);   color: var(--negro);  --foco: var(--negro); --sombra: var(--negro); }
+.fondo-negro  { background: var(--negro);  color: var(--blanco); --foco: var(--lima);  --sombra: var(--rosa); }
+
+.bloque { padding: var(--aire) var(--lado); }
+
+/* ---------- Cabecera y menú ---------- */
+
+.cabecera { background: var(--negro); color: var(--blanco); padding: 14px var(--lado); }
+.cabecera .dentro {
+  display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: space-between; gap: 8px 24px;
+}
+.marca {
+  display: inline-flex; align-items: center; min-height: 48px;
+  font-family: var(--titulos); font-weight: 900; font-size: 32px; line-height: 1;
+  color: var(--rosa); text-decoration: none;
+}
+.menu { display: flex; flex-wrap: wrap; gap: 6px; }
+.menu a {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px;
+  border-radius: 999px; font-weight: 700; text-decoration: none; color: var(--blanco);
+}
+.menu a:hover { background: #2A2A2A; }
+.menu a[aria-current="page"] { background: var(--lima); color: var(--negro); }
+
+/* ---------- Texto ---------- */
+
+.gigante {
+  font-family: var(--titulos); font-weight: 900; text-transform: uppercase;
+  font-size: clamp(40px, 11vw, 140px); line-height: 0.96; letter-spacing: -0.02em;
+}
+.grande {
+  font-family: var(--titulos); font-weight: 900;
+  font-size: clamp(34px, 6.4vw, 80px); line-height: 1; letter-spacing: -0.02em;
+}
+.mediano {
+  font-family: var(--titulos); font-weight: 900;
+  font-size: clamp(28px, 4vw, 48px); line-height: 1.05; letter-spacing: -0.01em;
+}
+.entrada { font-size: clamp(21px, 2.2vw, 26px); font-weight: 500; line-height: 1.35; max-width: 30em; }
+.corto { max-width: 58ch; }
+.nota { font-size: 17px; max-width: 70ch; }
+.fondo-negro .nota { color: var(--gris); }
+
+/* ---------- Botones ---------- */
+
+.boton {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 56px; padding: 0 30px;
+  border: 3px solid var(--negro); border-radius: 999px;
+  background: var(--lima); color: var(--negro);
+  font: 700 19px/1 var(--texto); text-decoration: none; cursor: pointer;
+  box-shadow: 5px 5px 0 var(--sombra);
+  transition: translate .12s ease, box-shadow .12s ease;
+}
+.boton:hover  { translate: -2px -2px; box-shadow: 8px 8px 0 var(--sombra); }
+.boton:active { translate: 3px 3px;  box-shadow: 2px 2px 0 var(--sombra); }
+.boton--negro { background: var(--negro); color: var(--blanco); --sombra: var(--rosa); }
+.boton--linea { background: transparent; color: inherit; border-color: currentColor; box-shadow: none; }
+.boton--linea:hover, .boton--linea:active { translate: none; box-shadow: none; background: rgba(0, 0, 0, .12); }
+.fondo-negro .boton--linea:hover { background: rgba(255, 255, 255, .16); }
+.botones { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+
+/* ---------- Inicio ---------- */
+
+.portada .dentro { display: flex; flex-wrap: wrap; align-items: center; gap: 32px 56px; }
+.portada__texto { flex: 999 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 24px; }
+.portada__bote { flex: 1 1 240px; min-width: 0; display: flex; justify-content: center; }
+.portada__bote svg { width: 100%; max-width: 300px; }
+
+.accesos { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 20px; }
+.acceso {
+  display: flex; flex-direction: column; gap: 8px; padding: 26px;
+  border-radius: 24px; color: var(--negro); text-decoration: none;
+  transition: translate .12s ease;
+}
+.acceso:hover { translate: 0 -4px; }
+.acceso h2 { font-family: var(--titulos); font-weight: 900; font-size: 26px; line-height: 1.1; }
+.acceso--rosa   { background: var(--rosa); }
+.acceso--lima   { background: var(--lima); }
+.acceso--blanco { background: var(--blanco); }
+
+/* ---------- Producto ---------- */
+
+.lista-ok { max-width: 640px; }
+.lista-ok li {
+  display: flex; align-items: center; gap: 16px; padding: 14px 0;
+  border-bottom: 3px solid var(--negro);
+  font-size: clamp(20px, 2vw, 24px); font-weight: 700;
+}
+.lista-ok li:last-child { border-bottom: 0; }
+.lista-ok svg { width: 32px; height: 32px; flex: none; }
+
+.pasos { display: flex; flex-wrap: wrap; gap: 28px 48px; }
+.pasos li { flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.pasos__num { font-family: var(--titulos); font-weight: 900; font-size: 56px; line-height: 1; color: var(--rosa); }
+.pasos h3 { font-size: 23px; line-height: 1.2; }
+.pasos p { color: var(--gris); }
+
+/* ---------- Sabores y precios: cajas de cristal ---------- */
+
+.vitrina { position: relative; isolation: isolate; overflow: hidden; }
+.mancha {
+  position: absolute; z-index: -1; border-radius: 50%;
+  filter: blur(90px); pointer-events: none;
+}
+.mancha--1 { width: 520px; height: 520px; background: var(--rosa); opacity: .55; top: 6%;      left: -140px; }
+.mancha--2 { width: 460px; height: 460px; background: var(--lima); opacity: .35; bottom: -90px; right: -110px; }
+
+.sabores { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+@media (min-width: 620px) { .sabores { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; } }
+@media (min-width: 940px) { .sabores { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; } }
+
+.sabor {
+  position: relative; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start;
+  width: 100%; aspect-ratio: 1 / 1; padding: clamp(14px, 2vw, 22px);
+  border: 1.5px solid rgba(255, 255, 255, .5); border-radius: clamp(22px, 3vw, 32px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, .22), rgba(255, 255, 255, .05) 55%, rgba(255, 255, 255, .12)), rgba(0, 0, 0, .32);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  backdrop-filter: blur(18px) saturate(160%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .75),
+    0 18px 40px rgba(0, 0, 0, .45);
+  color: var(--blanco); font: inherit; text-align: left; cursor: pointer;
+  transition: translate .15s ease, border-color .15s ease;
+}
+/* brillo en diagonal, como un reflejo en el cristal */
+.sabor::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(115deg, rgba(255, 255, 255, .34) 0%, rgba(255, 255, 255, 0) 34%);
+}
+.sabor:hover { translate: 0 -6px; border-color: var(--blanco); }
+
+.sabor__gota {
+  position: relative;
+  width: clamp(36px, 4.6vw, 52px); height: clamp(36px, 4.6vw, 52px); border-radius: 50%;
+  background: var(--tono);
+  box-shadow: 0 0 30px 6px var(--tono), inset 0 3px 0 rgba(255, 255, 255, .55);
+}
+.sabor__texto { position: relative; display: flex; flex-direction: column; gap: 6px; width: 100%; }
+.sabor__nombre {
+  font-family: var(--titulos); font-weight: 700;
+  font-size: clamp(14px, 1.8vw, 20px); line-height: 1.15; overflow-wrap: anywhere;
+}
+/* el precio de cada sabor */
+.sabor__precio {
+  align-self: flex-start;
+  background: var(--blanco); color: var(--negro);
+  padding: 4px 12px; border-radius: 999px;
+  font-weight: 700; font-size: clamp(15px, 1.7vw, 19px); line-height: 1.3;
+}
+
+.sabor__marca {
+  position: absolute; right: 12px; top: 12px; width: 34px; height: 34px;
+  opacity: 0; scale: .4; transition: opacity .15s ease, scale .15s ease;
+}
+.sabor[aria-pressed="true"] {
+  border: 3px solid var(--lima);
+  background: linear-gradient(135deg, rgba(210, 255, 60, .34), rgba(255, 255, 255, .06) 60%, rgba(210, 255, 60, .16)), rgba(0, 0, 0, .32);
+}
+.sabor[aria-pressed="true"] .sabor__marca { opacity: 1; scale: 1; }
+.sabor[aria-pressed="true"] .sabor__precio { background: var(--lima); }
+
+/* Si el navegador no soporta el desenfoque, cristal más opaco */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .sabor { background: rgba(40, 40, 40, .88); }
+}
+
+.eleccion { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; }
+.eleccion p { font-weight: 700; font-size: 22px; }
+
+/* ---------- Más productos ---------- */
+
+.fichas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 20px; }
+.ficha {
+  display: flex; flex-direction: column; gap: 10px; padding: 24px;
+  border: 3px solid var(--negro); border-radius: 24px; background: var(--blanco);
+}
+.ficha h2 { font-family: var(--titulos); font-weight: 700; font-size: 22px; line-height: 1.15; }
+.ficha p:first-of-type { flex: 1; }
+.ficha__precio { font-weight: 700; font-size: 22px; }
+
+/* ---------- Contacto ---------- */
+
+.dos { display: flex; flex-wrap: wrap; gap: 36px 64px; align-items: flex-start; }
+.dos__a { flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 18px; }
+.dos__b { flex: 1.3 1 400px; min-width: 0; }
+.dos__a > a { display: inline-flex; align-items: center; align-self: flex-start; min-height: 44px; font-weight: 700; }
+
+.chivato { align-self: flex-start; background: var(--lima); color: var(--negro); padding: 8px 16px; border-radius: 999px; font-weight: 700; }
+
+.formulario {
+  --foco: var(--negro);
+  background: var(--blanco); color: var(--negro);
+  border-radius: 28px; padding: clamp(22px, 3.5vw, 36px);
+  display: flex; flex-direction: column; gap: 18px;
+}
+.campo { display: flex; flex-direction: column; gap: 6px; }
+.campo label { font-weight: 700; font-size: 17px; }
+.campo input, .campo textarea {
+  width: 100%; padding: 0 14px; height: 52px;
+  border: 3px solid var(--negro); border-radius: 14px;
+  background: var(--blanco); color: var(--negro); font: inherit;
+}
+.campo textarea { height: auto; padding: 12px 14px; resize: vertical; }
+.campo input:focus-visible, .campo textarea:focus-visible { outline-offset: 0; border-color: var(--rosa); }
+.formulario .nota { color: #3D3D3D; }
+
+/* ---------- Pie ---------- */
+
+.pie { background: var(--negro); color: var(--gris); padding: 40px var(--lado); border-top: 3px solid var(--rosa); font-size: 16px; }
+.pie .dentro { display: flex; flex-direction: column; gap: 14px; }
+.pie__marca { font-family: var(--titulos); font-weight: 900; font-size: 28px; line-height: 1; color: var(--rosa); }
+.pie p { max-width: 90ch; }
+
+/* ---------- Menos movimiento si el usuario lo pide ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .boton, .acceso, .sabor, .sabor__marca { transition: none; }
+}
+.dos__a .nota a { font-weight: 700; }
