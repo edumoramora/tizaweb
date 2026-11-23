@@ -56,9 +56,9 @@
     return -1;
   }
 
-  // "Mango (19,90 €), Limón (17,90 €) y Cola (18,50 €)"
+  // "Mango, Limón y Cola"
   function listaLegible() {
-    var partes = elegidos.map(function (x) { return x.precio ? x.sabor + ' (' + x.precio + ')' : x.sabor; });
+    var partes = elegidos.map(function (x) { return  x.sabor});
     if (partes.length < 2) { return partes.join(''); }
     return partes.slice(0, -1).join(', ') + ' y ' + partes[partes.length - 1];
   }
@@ -81,7 +81,7 @@
     caja.addEventListener('click', function () {
       var i = posicion(caja.dataset.sabor);
       if (i >= 0) { elegidos.splice(i, 1); }
-      else { elegidos.push({ sabor: caja.dataset.sabor, precio: precioDe(caja) }); }
+      else { elegidos.push({ sabor: caja.dataset.sabor }); }
       guardar(elegidos);
       pintar();
     });
@@ -101,7 +101,7 @@
       'Producto: Tiza creatina monohidrato 300 g',
       'Sabores que le interesan:',
       elegidos.length
-        ? elegidos.map(function (x) { return '- ' + x.sabor + (x.precio ? ': ' + x.precio : ''); }).join('\n')
+        ? elegidos.map(function (x) { return '- ' + x.sabor ; }).join('\n')
         : '- Ninguno elegido en la web',
       '',
       'Nombre: ' + dato('nombre'),
