@@ -98,7 +98,7 @@
     return [
       'Nuevo pedido desde la web de Tiza',
       '',
-      'Producto: Tiza creatina monohidrato 300 g',
+      'Producto: Vape 60k usos',
       'Sabores que le interesan:',
       elegidos.length
         ? elegidos.map(function (x) { return '- ' + x.sabor ; }).join('\n')
