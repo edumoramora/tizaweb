@@ -28,103 +28,285 @@
     </div>
   </header>
 
-  <main id="contenido">
-    <section class="bloque fondo-negro vitrina">
-      <span class="mancha mancha--1" aria-hidden="true"></span>
-      <span class="mancha mancha--2" aria-hidden="true"></span>
-      <div class="dentro pila">
-        <h1 class="grande">Sabores y precios</h1>
-        <p class="entrada">Toca un sabor para añadirlo a tu pedido. Precio por bote de 300 g.</p>
-        <!-- Para cambiar un precio, sustituye [PRECIO] en la caja de ese sabor. Ejemplo: 19,90 € -->
-        <ul class="sabores">
-          <li>
-            <button class="sabor" type="button" data-sabor="Neutra" aria-pressed="false" style="--tono: #FFFFFF">
-              <span class="sabor__gota" aria-hidden="true"></span>
-              <span class="sabor__texto">
-                <span class="sabor__nombre">Neutra, sin sabor</span>
-                <span class="sabor__precio">[PRECIO]</span>
-              </span>
-              <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-          </li>
-          <li>
-            <button class="sabor" type="button" data-sabor="Limón" aria-pressed="false" style="--tono: #FFE83A">
-              <span class="sabor__gota" aria-hidden="true"></span>
-              <span class="sabor__texto">
-                <span class="sabor__nombre">Limón</span>
-                <span class="sabor__precio">[PRECIO]</span>
-              </span>
-              <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-          </li>
-          <li>
-            <button class="sabor" type="button" data-sabor="Frutos rojos" aria-pressed="false" style="--tono: #D81B60">
-              <span class="sabor__gota" aria-hidden="true"></span>
-              <span class="sabor__texto">
-                <span class="sabor__nombre">Frutos rojos</span>
-                <span class="sabor__precio">[PRECIO]</span>
-              </span>
-              <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-          </li>
-          <li>
-            <button class="sabor" type="button" data-sabor="Sandía" aria-pressed="false" style="--tono: #FF6B81">
-              <span class="sabor__gota" aria-hidden="true"></span>
-              <span class="sabor__texto">
-                <span class="sabor__nombre">Sandía</span>
-                <span class="sabor__precio">[PRECIO]</span>
-              </span>
-              <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-          </li>
-          <li>
-            <button class="sabor" type="button" data-sabor="Mango" aria-pressed="false" style="--tono: #FFA726">
-              <span class="sabor__gota" aria-hidden="true"></span>
-              <span class="sabor__texto">
-                <span class="sabor__nombre">Mango</span>
-                <span class="sabor__precio">[PRECIO]</span>
-              </span>
-              <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-          </li>
-          <li>
-            <button class="sabor" type="button" data-sabor="Cola" aria-pressed="false" style="--tono: #B5651D">
-              <span class="sabor__gota" aria-hidden="true"></span>
-              <span class="sabor__texto">
-                <span class="sabor__nombre">Cola</span>
-                <span class="sabor__precio">[PRECIO]</span>
-              </span>
-              <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-          </li>
-          <li>
-            <button class="sabor" type="button" data-sabor="Naranja sanguina" aria-pressed="false" style="--tono: #FF4D2E">
-              <span class="sabor__gota" aria-hidden="true"></span>
-              <span class="sabor__texto">
-                <span class="sabor__nombre">Naranja sanguina</span>
-                <span class="sabor__precio">[PRECIO]</span>
-              </span>
-              <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-          </li>
-          <li>
-            <button class="sabor" type="button" data-sabor="Manzana verde" aria-pressed="false" style="--tono: #7BE046">
-              <span class="sabor__gota" aria-hidden="true"></span>
-              <span class="sabor__texto">
-                <span class="sabor__nombre">Manzana verde</span>
-                <span class="sabor__precio">[PRECIO]</span>
-              </span>
-              <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-          </li>
-        </ul>
-        <div class="eleccion">
-          <p aria-live="polite" data-eleccion data-con="Has elegido %s: %p" data-sin="Aún no has elegido sabor.">Aún no has elegido sabor.</p>
-          <a class="boton" href="contacto.html">Pedir por Telegram</a>
-        </div>
+ <main id="contenido">
+  <section class="bloque fondo-negro vitrina">
+    <span class="mancha mancha--1" aria-hidden="true"></span>
+    <span class="mancha mancha--2" aria-hidden="true"></span>
+    <div class="dentro pila">
+      <h1 class="grande">Sabores y precios</h1>
+      <p class="entrada">Toca un sabor para añadirlo a tu pedido.</p>
+      <!-- Para cambiar un precio, sustituye [PRECIO] en la caja de ese sabor. Ejemplo: 19,90 € -->
+      <ul class="sabores">
+
+        <!-- Nuevos sabores añadidos -->
+        <li>
+          <button class="sabor" type="button" data-sabor="Strawberry Banana" aria-pressed="false" style="--tono: #FF8C69">
+            <span class="sabor__gota" aria-hidden="true"></span>
+            <span class="sabor__texto">
+              <span class="sabor__nombre">Strawberry Banana</span>
+              <span class="sabor__precio">[PRECIO]</span>
+            </span>
+            <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="sabor" type="button" data-sabor="Juicy Peach Ice" aria-pressed="false" style="--tono: #FFB07C">
+            <span class="sabor__gota" aria-hidden="true"></span>
+            <span class="sabor__texto">
+              <span class="sabor__nombre">Juicy Peach Ice</span>
+              <span class="sabor__precio">[PRECIO]</span>
+            </span>
+            <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="sabor" type="button" data-sabor="Coco Loco" aria-pressed="false" style="--tono: #F5F5DC">
+            <span class="sabor__gota" aria-hidden="true"></span>
+            <span class="sabor__texto">
+              <span class="sabor__nombre">Coco Loco</span>
+              <span class="sabor__precio">[PRECIO]</span>
+            </span>
+            <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="sabor" type="button" data-sabor="Blueberry Sour Raspberry" aria-pressed="false" style="--tono: #5C6BC0">
+            <span class="sabor__gota" aria-hidden="true"></span>
+            <span class="sabor__texto">
+              <span class="sabor__nombre">Blueberry Sour Raspberry</span>
+              <span class="sabor__precio">[PRECIO]</span>
+            </span>
+            <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="sabor" type="button" data-sabor="Cotton Candy" aria-pressed="false" style="--tono: #F48FB1">
+            <span class="sabor__gota" aria-hidden="true"></span>
+            <span class="sabor__texto">
+              <span class="sabor__nombre">Cotton Candy</span>
+              <span class="sabor__precio">[PRECIO]</span>
+            </span>
+            <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="sabor" type="button" data-sabor="Gummy Bear" aria-pressed="false" style="--tono: #FF7043">
+            <span class="sabor__gota" aria-hidden="true"></span>
+            <span class="sabor__texto">
+              <span class="sabor__nombre">Gummy Bear</span>
+              <span class="sabor__precio">[PRECIO]</span>
+            </span>
+            <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="sabor" type="button" data-sabor="Blueberry Watermelon" aria-pressed="false" style="--tono: #7E57C2">
+            <span class="sabor__gota" aria-hidden="true"></span>
+            <span class="sabor__texto">
+              <span class="sabor__nombre">Blueberry Watermelon</span>
+              <span class="sabor__precio">[PRECIO]</span>
+            </span>
+            <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="sabor" type="button" data-sabor="Lemon Peach Passion Fruit" aria-pressed="false" style="--tono: #FFCA28">
+            <span class="sabor__gota" aria-hidden="true"></span>
+            <span class="sabor__texto">
+              <span class="sabor__nombre">Lemon Peach Passion Fruit</span>
+              <span class="sabor__precio">[PRECIO]</span>
+            </span>
+            <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="sabor" type="button" data-sabor="Black Ice Dragon Fruit Strawberry" aria-pressed="false" style="--tono: #C2185B">
+            <span class="sabor__gota" aria-hidden="true"></span>
+            <span class="sabor__texto">
+              <span class="sabor__nombre">Black Ice Dragon Fruit Strawberry</span>
+              <span class="sabor__precio">[PRECIO]</span>
+            </span>
+            <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="sabor" type="button" data-sabor="Mixed Berries" aria-pressed="false" style="--tono: #8E24AA">
+            <span class="sabor__gota" aria-hidden="true"></span>
+            <span class="sabor__texto">
+              <span class="sabor__nombre">Mixed Berries</span>
+              <span class="sabor__precio">[PRECIO]</span>
+            </span>
+            <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="sabor" type="button" data-sabor="Love 66" aria-pressed="false" style="--tono: #FF4081">
+            <span class="sabor__gota" aria-hidden="true"></span>
+            <span class="sabor__texto">
+              <span class="sabor__nombre">Love 66</span>
+              <span class="sabor__precio">[PRECIO]</span>
+            </span>
+            <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="sabor" type="button" data-sabor="Strawberry Kiwi" aria-pressed="false" style="--tono: #FF5252">
+            <span class="sabor__gota" aria-hidden="true"></span>
+            <span class="sabor__texto">
+              <span class="sabor__nombre">Strawberry Kiwi</span>
+              <span class="sabor__precio">[PRECIO]</span>
+            </span>
+            <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="sabor" type="button" data-sabor="Tropical Fruit" aria-pressed="false" style="--tono: #FF9800">
+            <span class="sabor__gota" aria-hidden="true"></span>
+            <span class="sabor__texto">
+              <span class="sabor__nombre">Tropical Fruit</span>
+              <span class="sabor__precio">[PRECIO]</span>
+            </span>
+            <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="sabor" type="button" data-sabor="Strawberry Vanilla Coke" aria-pressed="false" style="--tono: #8D4925">
+            <span class="sabor__gota" aria-hidden="true"></span>
+            <span class="sabor__texto">
+              <span class="sabor__nombre">Strawberry Vanilla Coke</span>
+              <span class="sabor__precio">[PRECIO]</span>
+            </span>
+            <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="sabor" type="button" data-sabor="Lemon Lime" aria-pressed="false" style="--tono: #C6FF00">
+            <span class="sabor__gota" aria-hidden="true"></span>
+            <span class="sabor__texto">
+              <span class="sabor__nombre">Lemon Lime</span>
+              <span class="sabor__precio">[PRECIO]</span>
+            </span>
+            <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="sabor" type="button" data-sabor="Summer Dream" aria-pressed="false" style="--tono: #FFAB40">
+            <span class="sabor__gota" aria-hidden="true"></span>
+            <span class="sabor__texto">
+              <span class="sabor__nombre">Summer Dream</span>
+              <span class="sabor__precio">[PRECIO]</span>
+            </span>
+            <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="sabor" type="button" data-sabor="Cola Ice" aria-pressed="false" style="--tono: #795548">
+            <span class="sabor__gota" aria-hidden="true"></span>
+            <span class="sabor__texto">
+              <span class="sabor__nombre">Cola Ice</span>
+              <span class="sabor__precio">[PRECIO]</span>
+            </span>
+            <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="sabor" type="button" data-sabor="Strawberry Ice" aria-pressed="false" style="--tono: #FF1744">
+            <span class="sabor__gota" aria-hidden="true"></span>
+            <span class="sabor__texto">
+              <span class="sabor__nombre">Strawberry Ice</span>
+              <span class="sabor__precio">[PRECIO]</span>
+            </span>
+            <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="sabor" type="button" data-sabor="Energy Drink" aria-pressed="false" style="--tono: #00E5FF">
+            <span class="sabor__gota" aria-hidden="true"></span>
+            <span class="sabor__texto">
+              <span class="sabor__nombre">Energy Drink</span>
+              <span class="sabor__precio">[PRECIO]</span>
+            </span>
+            <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="sabor" type="button" data-sabor="Strawberry Raspberry Cherry Ice" aria-pressed="false" style="--tono: #D50000">
+            <span class="sabor__gota" aria-hidden="true"></span>
+            <span class="sabor__texto">
+              <span class="sabor__nombre">Strawberry Raspberry Cherry Ice</span>
+              <span class="sabor__precio">[PRECIO]</span>
+            </span>
+            <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="sabor" type="button" data-sabor="Cheesecake" aria-pressed="false" style="--tono: #FFF176">
+            <span class="sabor__gota" aria-hidden="true"></span>
+            <span class="sabor__texto">
+              <span class="sabor__nombre">Cheesecake</span>
+              <span class="sabor__precio">[PRECIO]</span>
+            </span>
+            <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="sabor" type="button" data-sabor="Pineapple Coconut" aria-pressed="false" style="--tono: #FFEE58">
+            <span class="sabor__gota" aria-hidden="true"></span>
+            <span class="sabor__texto">
+              <span class="sabor__nombre">Pineapple Coconut</span>
+              <span class="sabor__precio">[PRECIO]</span>
+            </span>
+            <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="sabor" type="button" data-sabor="Pink Lemonade" aria-pressed="false" style="--tono: #FF80AB">
+            <span class="sabor__gota" aria-hidden="true"></span>
+            <span class="sabor__texto">
+              <span class="sabor__nombre">Pink Lemonade</span>
+              <span class="sabor__precio">[PRECIO]</span>
+            </span>
+            <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="sabor" type="button" data-sabor="Strawberry Mango" aria-pressed="false" style="--tono: #FF6E40">
+            <span class="sabor__gota" aria-hidden="true"></span>
+            <span class="sabor__texto">
+              <span class="sabor__nombre">Strawberry Mango</span>
+              <span class="sabor__precio">[PRECIO]</span>
+            </span>
+            <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="sabor" type="button" data-sabor="Coconut Breeze" aria-pressed="false" style="--tono: #E0F7FA">
+            <span class="sabor__gota" aria-hidden="true"></span>
+            <span class="sabor__texto">
+              <span class="sabor__nombre">Coconut Breeze</span>
+              <span class="sabor__precio">[PRECIO]</span>
+            </span>
+            <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </li>
+        <li>
+          <button class="sabor" type="button" data-sabor="Rainbow Burst" aria-pressed="false" style="--tono: #EA80FC">
+            <span class="sabor__gota" aria-hidden="true"></span>
+            <span class="sabor__texto">
+              <span class="sabor__nombre">Rainbow Burst</span>
+              <span class="sabor__precio">[PRECIO]</span>
+            </span>
+            <svg class="sabor__marca" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#D2FF3C"/><path d="M9.5 17.5 L15 23 L25 12" fill="none" stroke="#000000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </li>
+      </ul>
+      <div class="eleccion">
+        <p aria-live="polite" data-eleccion data-con="Has elegido %s: %p" data-sin="Aún no has elegido sabor.">Aún no has elegido sabor.</p>
+        <a class="boton" href="contacto.html">Pedir por Telegram</a>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+</main>
 
   <footer class="pie">
     <div class="dentro">

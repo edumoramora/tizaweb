@@ -33,10 +33,10 @@
       <div class="dentro dos">
         <div class="dos__a">
           <h1 class="grande">Pide por Telegram</h1>
-          <p class="corto">Rellena el pedido y se abre nuestro chat de Telegram con el mensaje ya escrito. Solo tienes que enviarlo.</p>
-          <p class="chivato" aria-live="polite" data-eleccion data-con="%s: %p" data-sin="Sin sabor elegido todavía">Sin sabor elegido todavía</p>
-          <a href="sabores.html">Elegir o cambiar de sabor</a>
-          <p class="nota">Si prefieres escribirnos tú directamente, estamos en Telegram: <a data-telegram href="https://t.me/">[TU USUARIO DE TELEGRAM]</a></p>
+          <p class="corto">Rellena el pedido y nos llega directamente por Telegram. Te contestamos por allí con el total y la entrega.</p>
+          <p class="chivato" aria-live="polite" data-eleccion data-varios="Te interesan: %l" data-sin="Aún no has elegido sabores">Aún no has elegido sabores</p>
+          <a href="sabores.html">Elegir o cambiar sabores</a>
+          <p class="nota">Si prefieres escribirnos tú directamente, estamos en Telegram: <a data-telegram href="https://t.me/tizavape">@tizavape</a></p>
         </div>
         <form class="formulario dos__b" data-pedido>
           <div class="campo">
@@ -44,11 +44,19 @@
             <input id="f-nombre" name="nombre" type="text" autocomplete="name" required>
           </div>
           <div class="campo">
+            <label for="f-tg">Tu usuario de Telegram</label>
+            <input id="f-tg" name="telegram" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="@tuusuario" required>
+          </div>
+          <div class="campo">
             <label for="f-msg">Qué quieres pedir</label>
             <textarea id="f-msg" name="mensaje" rows="5" required></textarea>
           </div>
-          <button class="boton boton--negro" type="submit">Enviar pedido por Telegram</button>
-          <p class="nota" data-aviso aria-live="polite">Se abrirá Telegram con el pedido ya escrito.</p>
+          <div class="trampa" aria-hidden="true">
+            <label for="f-web">No rellenes este campo</label>
+            <input id="f-web" name="web" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <button class="boton boton--negro" type="submit">Enviar pedido</button>
+          <p class="nota" data-aviso aria-live="polite">El pedido llega a @tizavape en Telegram.</p>
         </form>
       </div>
     </section>

@@ -279,3 +279,10 @@ a { color: inherit; text-underline-offset: 4px; }
   .boton, .acceso, .sabor, .sabor__marca { transition: none; }
 }
 .dos__a .nota a { font-weight: 700; }
+
+/* ---------- Envío del pedido ---------- */
+
+/* campo oculto para frenar a los robots de spam */
+.trampa { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.boton[disabled] { opacity: .6; cursor: progress; translate: none; }
+[data-aviso] a { font-weight: 700; }
