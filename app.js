@@ -58,7 +58,7 @@
 
   // "Mango (19,90 €), Limón (17,90 €) y Cola (18,50 €)"
   function listaLegible() {
-    var partes = elegidos.map(function (x) { return x.precio ? x.sabor + ' (' + x.precio + ')' : x.sabor; });
+    var partes = elegidos.map(function (x) { return  x.sabor });
     if (partes.length < 2) { return partes.join(''); }
     return partes.slice(0, -1).join(', ') + ' y ' + partes[partes.length - 1];
   }
